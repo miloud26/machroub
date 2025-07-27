@@ -1801,34 +1801,7 @@ const wilayaInfo = wilayaCommuneInfo.map((item) => {
 });
 
 export default function Form({ id }) {
-  const sendNotification = async (newOrder) => {
-    const url = `https://api.telegram.org/bot${"7808946507:AAH0OwNAaL15AAsouO602jhC8qHHU7PcWbE"}/sendMessage`;
-
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: 5591540987,
-          text: `
-<b>${newOrder.msg}</b>
-
-`,
-          parse_mode: "HTML",
-        }),
-      });
-
-      if (response.ok) {
-        console.log("Notification sent successfully!");
-      } else {
-        console.error("Failed to send notification:", response.statusText);
-      }
-    } catch (error) {
-      console.error("Error sending notification:", error);
-    }
-  };
+  
 
   const [btnDisebled, setBtnDisebled] = useState(false);
 
