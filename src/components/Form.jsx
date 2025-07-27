@@ -1848,25 +1848,7 @@ export default function Form({ id }) {
       return;
     }
   }, [isMakeOrder]);
-  useEffect(() => {
-    if (
-      wilaya === "Adrar" ||
-      wilaya === "Bechar" ||
-      wilaya === "Tamanrasset" ||
-      wilaya === "Illizi" ||
-      wilaya === "Tindouf" ||
-      wilaya === "Timimoun" ||
-      wilaya === "Bordj Badji Mokhtar" ||
-      wilaya === "Beni Abbes" ||
-      wilaya === "In Salah" ||
-      wilaya === "In Guezzam" ||
-      wilaya === "Touggourt" ||
-      wilaya === "Djanet" ||
-      wilaya === "El Meniaa"
-    ) {
-      setFakeBtn(true);
-    }
-  }, [wilaya]);
+
 
   useEffect(() => {
     const regex = /^[5-7]\d{8}$/;
@@ -1921,9 +1903,7 @@ export default function Form({ id }) {
         top: 500,
         behavior: "smooth", // Smooth scrolling animation
       });
-      const newOrder = {
-        msg: `*New Order Received!* ${price + delevery}`,
-      };
+     
 
       localStorage.setItem(
         "makeOrder",
@@ -1933,7 +1913,7 @@ export default function Form({ id }) {
         })
       );
 
-      sendNotification(newOrder);
+     
     } catch (error) {
       console.log(error);
     }

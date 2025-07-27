@@ -9,19 +9,7 @@ function Machroub() {
   )[0];
   return (
     <Box>
-      <Box
-        sx={{
-          padding: "12px",
-          backgroundColor: "rgb(135 96 161)",
-          fontWeight: "bold",
-          textAlign: "center",
-          color: "white",
-        }}
-      >
-        مرحبا بكم في متجر مانورا شوب
-      </Box>
-
-      <Divider />
+ 
 
       <Box
         padding={"12px 250px"}
