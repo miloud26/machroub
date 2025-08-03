@@ -4,7 +4,7 @@ export const data = [
   {
     id: "l-2",
     name: "مشروب الخلعة",
-    price: 2800,
+    price: 1900,
     delevery: "حسب الولاية",
     clr: [],
     size: [],
