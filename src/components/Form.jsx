@@ -1803,7 +1803,7 @@ const wilayaInfo = wilayaCommuneInfo.map((item) => {
 export default function Form({ id }) {
   
 
-  const [btnDisebled, setBtnDisebled] = useState(false);
+  const [btnDisebled, setBtnDisebled] = useState(true);
 
   const [purchaise, setPurchaise] = useState(false);
 
@@ -1865,6 +1865,10 @@ export default function Form({ id }) {
       setCorrectNumber(false);
     }
   }, [phone]);
+  useEffect(() => {
+    setBtnDisebled(true);
+ 
+  }, []);
 
   const handleSubmitOrder = async (e) => {
     e.preventDefault();
@@ -2379,7 +2383,7 @@ export default function Form({ id }) {
             }}
           >
             <Button
-              disabled={btnDisebled}
+              disabled={btnDisebled ===true ? true : false}
               sx={{
                 fontWeight: "bold",
                 width: "55%",
