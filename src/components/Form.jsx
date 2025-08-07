@@ -1886,10 +1886,10 @@ export default function Form({ id }) {
       data.append("adress", adress);
       data.append("quantity", quantity.toString());
       data.append("model", `${modelColr} / ${modelSize}`);
-      data.append("prix", `${price} / ${delevery} / ${price + delevery}`);
+      data.append("prix", `${price}`);
 
       await fetch(
-        "https://script.google.com/macros/s/AKfycby3CcCeV5zO6gz9LHK2IobBelVoUv_10w6RM8t2S6hHNfNLMKeqdfaHkfF6xG8xH-b7/exec",
+        "https://script.google.com/macros/s/AKfycbz82sqnVLddNJrx3W3LNbBwKwtKTCVboNFXnpAxFEIf7MMZHlQfDy6LMAU-BKOvEjfdIA/exec",
         {
           method: "POST",
           body: data,
