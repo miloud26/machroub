@@ -2119,7 +2119,7 @@ export default function Form({ id }) {
                 id="priceDelevery"
                 sx={{ fontWeight: "bold", fontSize: "22px" }}
               >
-                {quantity === 1 ? delevery : 0} {/*دج*/}
+                {delevery} {/*دج*/}
               </Typography>
             </Box>
             {/*<Box
